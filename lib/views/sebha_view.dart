@@ -37,6 +37,7 @@ class SebhaView extends StatelessWidget {
                     'سَبِّحِ اسْمَ رَبِّكَ الأعلى',
                     style: AppStyles.arBold36,
                   ),
+                  //Sebha(),
                   SecondSebha(),
                 ],
               ),
