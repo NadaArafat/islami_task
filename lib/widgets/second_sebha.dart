@@ -14,7 +14,7 @@ class SecondSebha extends StatefulWidget {
 
 class _SecondSebhaState extends State<SecondSebha> {
   int currentZeckrCount = 0;
-  final int maxZeckrCount = 32;
+  final int maxZeckrCount = 3;
   int currentZeckr = 0; // سبحان الله 0 - الحمد لله 1 - الله اكبر 2
   double rotationAngel = 0;
 
@@ -70,10 +70,9 @@ class _SecondSebhaState extends State<SecondSebha> {
               currentZeckrCount = 0;
             } else {
               currentZeckrCount++;
+              rotationAngel+=(360/maxZeckrCount) * (pi/180);
             }
-          });
-          rotationAngel+=(360/maxZeckrCount) * (pi/180);
-        },
+          });},
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -90,6 +89,7 @@ class _SecondSebhaState extends State<SecondSebha> {
     return GestureDetector(
       onTap: () {
         setState(() {
+          rotationAngel = 0;
           currentZeckrCount = 0;
           currentZeckr = 0;
         });
